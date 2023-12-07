@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/htmx.org@1.9.6"
+    integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>BETHshortly</title>
+</head>
+
+<body class="flex flex-col items-center">
+  <div class="navbar bg-base-100">
+    <a class="text-xl normal-case btn btn-ghost">BETHshortly</a>
+  </div>
+
+  <main>
+    <!-- Existing content -->
+  
+    <section class="flex flex-col gap-5 mt-4 md:mt-32 px-5">
+      <!-- Existing content -->
+  
+      <!-- Login Form -->
+      <div class="relative flex items-center mt-6">
+        <form class="w-full" hx-post="/login" hx-swap="afterbegin" hx-target="#results">
+          <!-- Add your login form fields -->
+          <input name="username" required type="text" placeholder="Username" class="input pl-14 h-[58px] rounded-full w-full input-bordered" />
+          <input name="password" required type="password" placeholder="Password" class="input pl-14 h-[58px] rounded-full w-full input-bordered" />
+          
+          <!-- Submit button -->
+          <button class="btn mt-1 bg-blue-600 font-semibold rounded-[48px] absolute text-white right-1 capitalize">Login</button>
+        </form>
+      </div>
+    </section>
+  
+    <!-- Existing content -->
+  
+    <section class="flex flex-col gap-[25px] mt-[5rem]" id="results">
+      <!-- Result section -->
+    </section>
+  </main>
+  
+
+  <!-- <script src="/public/copy.js" defer></script> -->
+</body>
+
+</html>
